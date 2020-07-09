@@ -6,7 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head />
-        <body id="app">
+        <body>
           <Main />
           <NextScript />
         </body>

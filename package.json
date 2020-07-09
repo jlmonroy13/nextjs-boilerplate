@@ -1,5 +1,5 @@
 {
-  "name": "fleetops",
+  "name": "next-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -37,6 +37,7 @@
   "lint-style": "stylelint '**/*/.scss'",
   "dependencies": {
     "next": "9.4.4",
+    "node-fetch": "^2.6.1",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",

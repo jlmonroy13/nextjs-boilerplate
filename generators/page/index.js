@@ -27,19 +27,13 @@ module.exports = {
     const actions = [
       {
         type: 'add',
-        path: '../pages/{{properCase name}}/{{properCase name}}.js',
-        templateFile: './page/page.js.hbs',
-        abortOnFail: true,
-      },
-      {
-        type: 'add',
-        path: '../pages/{{properCase name}}/index.js',
+        path: '../pages/{{name}}/index.js',
         templateFile: './page/index.js.hbs',
         abortOnFail: true,
       },
       {
         type: 'add',
-        path: '../pages/{{properCase name}}/{{dashCase name}}.scss',
+        path: '../pages/{{name}}/{{dashCase name}}.scss',
         templateFile: './page/page.scss.hbs',
         abortOnFail: true,
       },
