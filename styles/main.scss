@@ -1,0 +1,23 @@
+// Settings and Colors
+@import 'settings/colors';
+@import 'settings/variables';
+
+// Core styles
+@import 'core/core';
+@import 'core/fonts';
+@import 'core/typography';
+
+// Vendor
+
+
+// Components
+@import "components/Header/header";
+@import "components/Container/container";
+
+// Pages
+
+
+// Helpers
+@import 'helpers/spacing-helpers';
+@import 'helpers/text-helpers';
+@import 'helpers/visibility-helpers';

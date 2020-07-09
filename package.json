@@ -1,0 +1,61 @@
+{
+  "name": "fleetops",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint-staged": "lint-staged",
+    "generate": "plop --plopfile generators/index.js",
+    "prettify": "prettier --write",
+    "lint:scss": "stylelint **/*.scss",
+    "lint:js": "npm run lint:eslint -- . ",
+    "lint": "npm run lint:js && npm run lint:scss",
+    "lint:eslint": "eslint --ignore-path .gitignore",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "**/*.json": [
+      "prettier --write",
+      "git add --force"
+    ],
+    "**/*.scss": [
+      "npm run lint:scss",
+      "git add --force"
+    ]
+  },
+  "lint-style": "stylelint '**/*/.scss'",
+  "dependencies": {
+    "next": "9.4.4",
+    "prop-types": "^15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.6",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "plop": "^2.7.1",
+    "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended": "^3.0.0"
+  }
+}
